@@ -1,0 +1,2209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gurumukh Provision Store — Your Trusted Kirana in Alambagh, Lucknow</title>
+<meta name="description" content="Family-run general store in Alambagh, Lucknow. Daily groceries, staples, snacks, and household essentials delivered fresh. Since the family began serving the neighborhood." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Manrope:wght@300;400;500;600;700;800&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    /* Modern general store palette — warm minimalist */
+    --bg: #f7f3ec;
+    --bg-alt: #ffffff;
+    --bg-warm: #efe6d5;
+    --ink: #2a1f18;
+    --ink-soft: #5a4a3d;
+    --accent: #b85c3a;
+    --accent-deep: #8e3f24;
+    --sage: #7a8770;
+    --sage-deep: #4f5b48;
+    --line: #e3d6bd;
+    --line-soft: #ede4d3;
+    --gold: #c89968;
+    --footer-bg: #2a1f18;
+
+    /* legacy aliases — keeps existing styles working */
+    --ink-deep: #1a1410;
+    --saffron: #b85c3a;
+    --saffron-deep: #8e3f24;
+    --cream: #f7f3ec;
+    --cream-warm: #efe6d5;
+    --paper: #ffffff;
+    --maroon: #b85c3a;
+    --maroon-deep: #8e3f24;
+    --forest: #7a8770;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Manrope', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .hindi { font-family: 'Tiro Devanagari Hindi', serif; }
+  .display { font-family: 'Fraunces', serif; font-variation-settings: "opsz" 144, "SOFT" 50; }
+
+  /* ---------- TOP STRIP ---------- */
+  .top-strip {
+    background: var(--ink);
+    color: var(--bg);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    padding: 9px 0;
+    position: relative;
+    z-index: 10;
+  }
+  .top-strip-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .top-strip .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 2px 10px;
+    border: 1px solid rgba(247, 243, 236, 0.2);
+    border-radius: 100px;
+    font-size: 11px;
+    color: var(--bg);
+    opacity: 0.85;
+  }
+  .top-strip-right { display: flex; gap: 20px; align-items: center; }
+  .top-strip a { color: var(--cream); text-decoration: none; transition: color 0.2s; }
+  .top-strip a:hover { color: var(--gold); }
+
+  /* ---------- HEADER ---------- */
+  .header {
+    background: var(--bg-alt);
+    color: var(--ink);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+  }
+  .header-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 18px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    color: var(--cream);
+  }
+  .logo-mark {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+  .logo-text .hindi { font-size: 20px; font-weight: 700; color: var(--accent); line-height: 1; letter-spacing: 0.02em; }
+  .logo-text .en { font-family: 'Fraunces', serif; font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--ink-soft); margin-top: 4px; font-weight: 500; }
+
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+  }
+  nav a {
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: relative;
+    padding: 6px 0;
+    transition: color 0.25s;
+  }
+  nav a::after { content: ''; position: absolute; bottom: 0; left: 50%; width: 0; height: 2px; background: var(--accent); transition: all 0.3s ease; }
+  nav a:hover { color: var(--accent); }
+  nav a:hover::after { width: 100%; left: 0; }
+
+  .header-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent);
+    color: var(--bg-alt);
+    padding: 12px 22px;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.25s;
+  }
+  .header-cta:hover { background: var(--accent-deep); transform: translateY(-1px); }
+
+  .menu-toggle { display: none; background: none; border: none; color: var(--ink); font-size: 24px; cursor: pointer; }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative;
+    background: var(--bg);
+    color: var(--ink);
+    padding: 100px 28px 120px;
+    overflow: hidden;
+    z-index: 2;
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+
+
+  .hero-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 14px;
+    background: rgba(184, 92, 58, 0.08);
+    border: 1px solid rgba(184, 92, 58, 0.25);
+    border-radius: 100px;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 28px;
+    animation: fadeInUp 0.8s ease-out both;
+  }
+  .hero-badge .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 3px rgba(184, 92, 58, 0.18);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 4px rgba(184, 92, 58, 0.25); }
+    50% { box-shadow: 0 0 0 8px rgba(184, 92, 58, 0.1); }
+  }
+
+  .hero h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(40px, 5.8vw, 78px);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    margin-bottom: 26px;
+    color: var(--ink);
+    animation: fadeInUp 0.9s 0.1s ease-out both;
+  }
+  .hero h1 .hindi-title {
+    display: block;
+    font-family: 'Tiro Devanagari Hindi', serif;
+    color: var(--ink);
+    font-size: clamp(36px, 5vw, 70px);
+    font-weight: 400;
+    margin-bottom: 14px;
+    line-height: 1.1;
+    font-style: normal;
+  }
+  .hero h1 em { font-style: italic; font-weight: 400; color: var(--accent); }
+
+  .hero p.lead {
+    font-size: clamp(16px, 1.25vw, 18px);
+    max-width: 480px;
+    color: var(--ink-soft);
+    margin-bottom: 36px;
+    line-height: 1.7;
+    animation: fadeInUp 1s 0.2s ease-out both;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    animation: fadeInUp 1.1s 0.3s ease-out both;
+  }
+  .btn-primary, .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 28px;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: none;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: var(--bg-alt);
+    box-shadow: 0 6px 18px rgba(184, 92, 58, 0.3);
+  }
+  .btn-primary:hover { background: var(--accent-deep); transform: translateY(-2px); box-shadow: 0 12px 28px rgba(184, 92, 58, 0.4); }
+  .btn-ghost {
+    background: transparent;
+    color: var(--ink);
+    border: 1.5px solid var(--ink);
+  }
+  .btn-ghost:hover { background: var(--ink); color: var(--bg-alt); }
+
+  .hero-stats {
+    display: flex;
+    gap: 36px;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid var(--line);
+    animation: fadeInUp 1.2s 0.4s ease-out both;
+  }
+  .hero-stat .num {
+    font-family: 'Fraunces', serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1;
+  }
+  .hero-stat .label {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-top: 6px;
+    font-weight: 600;
+  }
+
+  /* Hero visual — image-led modern editorial */
+  .hero-visual {
+    position: relative;
+    min-height: 540px;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 16px;
+    animation: fadeInUp 1s 0.3s ease-out both;
+  }
+  .hero-image-card {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    background: var(--bg-alt);
+    border: 1px solid var(--line);
+    aspect-ratio: 3/4;
+    grid-row: span 2;
+  }
+  .hero-image-card img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 16px;
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .hero-image-card:hover img { transform: scale(1.04); }
+  .hero-image-tag {
+    position: absolute;
+    bottom: 16px; left: 16px; right: 16px;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 14px 18px;
+    z-index: 2;
+  }
+  .hero-image-tag-cat {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .hero-image-tag-name {
+    display: block;
+    font-family: 'Fraunces', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+  .hero-image-tag-name em { font-style: italic; font-weight: 400; }
+
+  .hero-side-card {
+    background: var(--bg-warm);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .hero-side-stat .num {
+    font-family: 'Fraunces', serif;
+    font-size: 44px;
+    font-weight: 500;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .hero-side-stat .lbl {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-top: 6px;
+    font-weight: 600;
+  }
+  .hero-side-quote {
+    border-top: 1px solid var(--line);
+    padding-top: 18px;
+  }
+  .hero-side-quote .hi {
+    display: block;
+    font-family: 'Tiro Devanagari Hindi', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--ink);
+    line-height: 1.55;
+    margin-bottom: 8px;
+  }
+  .hero-side-quote .who {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-weight: 600;
+  }
+
+    /* ---------- MARQUEE ---------- */
+  .marquee {
+    background: var(--bg-warm);
+    color: var(--ink);
+    padding: 16px 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 3;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .marquee-track {
+    display: flex;
+    gap: 48px;
+    white-space: nowrap;
+    animation: scroll 45s linear infinite;
+    font-family: 'Fraunces', serif;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--ink-soft);
+    letter-spacing: 0.01em;
+  }
+  .marquee-track span {
+    display: inline-flex;
+    align-items: center;
+    gap: 60px;
+  }
+  .marquee-track .dot-sep { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); display: inline-block; opacity: 0.6; }
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ---------- SECTION BASE ---------- */
+  section { position: relative; z-index: 2; }
+  .section { max-width: 1280px; margin: 0 auto; padding: 130px 28px; }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  .eyebrow::before { content: ''; width: 30px; height: 1px; background: var(--accent); }
+
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(36px, 4.5vw, 62px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 20px;
+  }
+  .section-title em { font-style: italic; color: var(--accent); font-weight: 400; }
+  .section-sub {
+    font-size: 17px;
+    color: rgba(42, 31, 24, 0.65);
+    max-width: 600px;
+    line-height: 1.7;
+  }
+
+  /* ---------- ABOUT ---------- */
+  .about { background: var(--bg-alt); border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .about-visual {
+    position: relative;
+    aspect-ratio: 4/5;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--bg);
+    box-shadow: 16px 16px 0 var(--accent);
+  }
+  .about-visual-inner {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background: var(--bg-warm);
+    color: var(--ink);
+    text-align: center;
+  }
+  .about-visual-inner::before { content: ''; position: absolute; inset: 22px; border: 1px solid var(--accent); border-radius: 6px; pointer-events: none; opacity: 0.4; }
+  .about-visual .khanda-large { width: 120px; height: 120px; margin-bottom: 24px; }
+  .about-visual .hindi { font-size: 44px; color: var(--accent); line-height: 1.1; margin-bottom: 8px; }
+  .about-visual .en-script { font-family: 'Fraunces', serif; font-style: italic; font-size: 20px; color: var(--ink); margin-bottom: 32px; }
+  .about-visual .est { font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ink-soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 12px 20px; }
+
+  .about p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: rgba(42, 31, 24, 0.78);
+    margin-bottom: 20px;
+  }
+  .about p.hindi-quote {
+    font-family: 'Tiro Devanagari Hindi', serif;
+    font-size: 22px;
+    font-style: italic;
+    color: var(--accent);
+    border-left: 3px solid var(--accent);
+    padding-left: 22px;
+    margin: 30px 0;
+    line-height: 1.6;
+  }
+  .about-highlights {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 36px;
+  }
+  .highlight {
+    padding: 22px;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+  }
+  .highlight .icon { font-size: 28px; margin-bottom: 10px; }
+  .highlight h4 { font-family: 'Fraunces', serif; font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+  .highlight p { font-size: 13px; margin: 0; color: var(--ink-soft); }
+
+  /* ---------- CATEGORIES ---------- */
+  .categories { background: var(--bg); }
+  .categories-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .cat-card {
+    position: relative;
+    aspect-ratio: 1;
+    background: var(--bg-alt);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+    overflow: hidden;
+  }
+  .cat-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--accent);
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+    z-index: 0;
+  }
+  .cat-card:hover { transform: translateY(-6px); border-color: var(--accent); box-shadow: 0 24px 40px rgba(184, 92, 58, 0.15); }
+  .cat-card:hover::before { transform: translateY(0); }
+  .cat-card:hover .cat-inner { color: var(--bg-alt); }
+  .cat-card:hover .cat-number { color: rgba(255,255,255,0.6); }
+  .cat-card:hover .cat-arrow { background: rgba(255,255,255,0.95); color: var(--accent); transform: translate(4px, -4px); }
+
+  .cat-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    transition: color 0.4s;
+  }
+  .cat-emoji { font-size: 52px; line-height: 1; margin-bottom: auto; }
+  .cat-number {
+    position: absolute;
+    top: 0; right: 0;
+    font-family: 'Fraunces', serif;
+    font-size: 13px;
+    color: rgba(42, 31, 24, 0.35);
+    transition: color 0.4s;
+  }
+  .cat-name {
+    font-family: 'Fraunces', serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+  .cat-name-hi {
+    font-family: 'Tiro Devanagari Hindi', serif;
+    font-size: 14px;
+    opacity: 0.7;
+    margin-bottom: 14px;
+  }
+  .cat-arrow {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(42, 31, 24, 0.08);
+    display: grid;
+    place-items: center;
+    transition: all 0.3s;
+    align-self: flex-start;
+  }
+
+  /* ---------- BRANDS — LIGHT BENTO ---------- */
+  .brands {
+    background: var(--bg);
+    color: var(--ink);
+    padding: 130px 28px 110px;
+    overflow: hidden;
+    position: relative;
+    border-top: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  .brands-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  .brands-head {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+  .brands-head .eyebrow {
+    justify-content: center;
+    display: inline-flex;
+    color: var(--accent);
+  }
+  .brands-head .eyebrow::before { background: var(--accent); }
+  .brands .section-title { color: var(--ink); }
+  .brands .section-title em { color: var(--accent); font-style: italic; }
+  .brands .section-sub {
+    color: var(--ink-soft);
+    margin: 22px auto 0;
+    max-width: 580px;
+  }
+
+  /* Bento grid — main row */
+  .bento {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 280px 280px;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .bento-row-2 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 220px;
+    gap: 16px;
+  }
+
+  /* Tile base — clean white card */
+  .tile {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background: var(--bg-alt);
+    cursor: default;
+    border: 1px solid var(--line);
+    transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1),
+                border-color 0.4s,
+                box-shadow 0.4s;
+  }
+
+  .tile:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent);
+    box-shadow: 0 24px 50px rgba(42, 31, 24, 0.12);
+    z-index: 2;
+  }
+
+  .tile img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .tile:hover img { transform: scale(1.05); }
+
+  /* Subtle bottom gradient just for label legibility on photo tiles */
+  .tile-photo::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+      transparent 50%,
+      rgba(0, 0, 0, 0.55) 100%);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .tile-label {
+    position: absolute;
+    bottom: 22px;
+    left: 24px;
+    right: 24px;
+    z-index: 3;
+    color: #fff;
+  }
+  .tile-label .cat {
+    font-family: 'Manrope', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 0.9;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .tile-label .cat::before {
+    content: '';
+    width: 18px;
+    height: 1px;
+    background: rgba(255,255,255,0.7);
+  }
+  .tile-label .name {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(20px, 1.8vw, 26px);
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    color: #fff;
+  }
+  .tile-label .name em { font-style: italic; font-weight: 400; }
+
+  /* Hero tile (Aashirvaad) - tall vertical, contained */
+  .tile-hero {
+    grid-column: span 2;
+    grid-row: span 2;
+    background: #fcfaf5;
+  }
+  .tile-hero img {
+    object-fit: contain;
+    padding: 18px;
+  }
+  .tile-hero .tile-label {
+    background: linear-gradient(180deg, transparent, rgba(0,0,0,0.55));
+    padding: 60px 24px 22px;
+    bottom: 0; left: 0; right: 0;
+  }
+  .tile-hero .tile-label .name {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: clamp(28px, 2.6vw, 38px);
+    font-weight: 500;
+  }
+
+  .tile-wide { grid-column: span 4; }
+  .tile-mid { grid-column: span 2; }
+
+  /* Maggi: keep yellow background */
+  .tile-maggi { background: #f5d435; }
+  .tile-maggi img { object-fit: contain; }
+
+  /* Cleaning + Groceries: contained on cream */
+  .tile-cleaning,
+  .tile-groceries { background: #fcfaf5; }
+  .tile-cleaning img,
+  .tile-groceries img { object-fit: contain; padding: 18px; }
+
+  /* For tiles where image is contained (white/cream bg), label needs solid backdrop */
+  .tile-hero .tile-label,
+  .tile-cleaning .tile-label,
+  .tile-groceries .tile-label,
+  .tile-maggi .tile-label {
+    background: linear-gradient(180deg, transparent, rgba(0,0,0,0.6));
+    padding: 50px 24px 22px;
+    bottom: 0; left: 0; right: 0;
+  }
+  .tile-hero::after,
+  .tile-cleaning::after,
+  .tile-groceries::after,
+  .tile-maggi::after { display: none; }
+
+  /* Text tile — "+30 more brands" */
+  .tile-text {
+    grid-column: span 2;
+    background: var(--bg-warm);
+    border: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    text-align: center;
+  }
+  .tile-text:hover {
+    background: var(--bg-alt);
+    border-color: var(--accent);
+  }
+  .tile-text::after { display: none; }
+  .tile-text-num {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: clamp(54px, 5vw, 72px);
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .tile-text-lbl {
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink);
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+  .tile-text-line {
+    width: 36px;
+    height: 1px;
+    background: var(--accent);
+    margin: 0 auto 14px;
+    opacity: 0.5;
+  }
+  .tile-text-sub {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--ink-soft);
+    max-width: 200px;
+    line-height: 1.5;
+  }
+
+  /* Brand footer */
+  .brands-footer {
+    margin-top: 60px;
+    text-align: center;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: clamp(15px, 1.3vw, 18px);
+    color: var(--ink-soft);
+    line-height: 1.7;
+    max-width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .brands-footer strong {
+    color: var(--accent);
+    font-style: normal;
+    font-weight: 600;
+  }
+  .brands-footer .ornament {
+    color: var(--accent);
+    margin: 0 12px;
+    opacity: 0.5;
+    font-style: normal;
+  }
+  .brands-marquee-line {
+    display: block;
+    margin-top: 14px;
+    color: var(--ink-soft);
+    opacity: 0.7;
+    font-style: normal;
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+  }
+  .brands-marquee-line span { color: var(--accent); margin: 0 8px; opacity: 0.6; }
+
+  /* ---------- FEATURED PRODUCTS ---------- */
+  .featured { background: var(--bg-warm); }
+  .featured-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+  }
+  .product-card {
+    background: var(--bg-alt);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    transition: all 0.35s;
+    display: flex;
+    flex-direction: column;
+  }
+  .product-card:hover { transform: translateY(-6px); border-color: var(--accent); box-shadow: 0 24px 40px rgba(42, 31, 24, 0.1); }
+  .product-visual {
+    aspect-ratio: 4/3;
+    display: grid;
+    place-items: center;
+    font-size: 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .product-visual::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.3) 0%, transparent 70%);
+  }
+  .pv-1 { background: linear-gradient(135deg, #f5d97d 0%, #c89968 100%); }   /* amber golden */
+  .pv-2 { background: linear-gradient(135deg, #d68b64 0%, #8e3f24 100%); }   /* terracotta */
+  .pv-3 { background: linear-gradient(135deg, #b8c8a8 0%, #4f5b48 100%); }   /* fresh green */
+  .pv-4 { background: linear-gradient(135deg, #efe6d5 0%, #b8956a 100%); }   /* sage → olive */
+  .pv-5 { background: linear-gradient(135deg, #ffd9b3 0%, #b85c3a 100%); }   /* warm copper */
+  .pv-6 { background: linear-gradient(135deg, #d4c5a8 0%, #5a4a3d 100%); }   /* cream → forest */
+
+  .product-info { padding: 26px; flex: 1; display: flex; flex-direction: column; }
+  .product-tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--maroon);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .product-name {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    line-height: 1.2;
+  }
+  .product-hindi {
+    font-family: 'Tiro Devanagari Hindi', serif;
+    font-size: 15px;
+    color: rgba(42, 31, 24, 0.6);
+    margin-bottom: 14px;
+  }
+  .product-desc { font-size: 14px; color: rgba(42, 31, 24, 0.7); margin-bottom: 20px; flex: 1; }
+  .product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 18px;
+    border-top: 1px solid rgba(42, 31, 24, 0.08);
+    gap: 12px;
+  }
+  .quality-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Fraunces', serif;
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 500;
+    font-style: italic;
+  }
+  .quality-badge .star { color: var(--accent); font-style: normal; }
+  .whatsapp-btn {
+    background: #25d366;
+    color: white;
+    border: none;
+    padding: 9px 16px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    transition: transform 0.2s;
+  }
+  .whatsapp-btn:hover { transform: scale(1.05); }
+
+  /* ---------- WHY US ---------- */
+  .why { background: var(--bg-alt); border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); }
+  .why-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 80px;
+    align-items: flex-start;
+  }
+  .why-sticky { position: sticky; top: 120px; }
+  .why-list { display: flex; flex-direction: column; gap: 4px; }
+  .why-item {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 24px;
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(42, 31, 24, 0.1);
+    align-items: start;
+  }
+  .why-item:first-child { border-top: 1px solid rgba(42, 31, 24, 0.1); }
+  .why-num {
+    font-family: 'Fraunces', serif;
+    font-size: 52px;
+    font-weight: 300;
+    color: var(--accent);
+    line-height: 1;
+    font-style: italic;
+  }
+  .why-content h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  .why-content p { color: var(--ink-soft); font-size: 15px; line-height: 1.75; }
+
+  /* ---------- VISIT ---------- */
+  .visit { background: var(--bg-warm); color: var(--ink); padding: 120px 28px; }
+  .visit-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  .visit .section-title { color: var(--ink); }
+  .visit .section-title em { color: var(--maroon); }
+  .visit .eyebrow { color: var(--maroon); }
+  .visit .eyebrow::before { background: var(--maroon); }
+
+  .visit-details { display: flex; flex-direction: column; gap: 28px; margin-top: 40px; }
+  .visit-item {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 20px;
+    align-items: start;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .visit-icon {
+    width: 50px; height: 50px;
+    border-radius: 50%;
+    background: var(--bg-alt);
+    border: 1px solid var(--line);
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+  }
+  .visit-item h4 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+  .visit-item p { color: var(--ink); font-size: 16px; line-height: 1.6; }
+  .visit-item a { color: var(--ink); text-decoration: none; transition: color 0.2s; border-bottom: 1px solid rgba(42, 31, 24, 0.3); }
+  .visit-item a:hover { color: var(--maroon); border-bottom-color: var(--maroon); }
+
+  .map-card {
+    aspect-ratio: 1;
+    border-radius: 12px;
+    background: var(--ink);
+    border: 1px solid var(--ink);
+    position: relative;
+    overflow: hidden;
+    padding: 40px;
+  }
+  .map-grid-bg {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(184, 92, 58, 0.12) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(184, 92, 58, 0.12) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .map-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .map-pin {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    z-index: 3;
+  }
+  .map-pin-dot {
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 8px rgba(184, 92, 58, 0.3), 0 0 0 20px rgba(184, 92, 58, 0.12);
+    animation: pulse-map 2.5s infinite;
+  }
+  @keyframes pulse-map {
+    0%, 100% { box-shadow: 0 0 0 8px rgba(184, 92, 58, 0.25), 0 0 0 20px rgba(184, 92, 58, 0.1); }
+    50% { box-shadow: 0 0 0 14px rgba(184, 92, 58, 0.3), 0 0 0 32px rgba(184, 92, 58, 0.05); }
+  }
+  .map-pin-label {
+    background: var(--accent);
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  }
+  .map-header { display: flex; justify-content: space-between; font-size: 11px; color: rgba(247, 243, 236, 0.5); letter-spacing: 0.15em; text-transform: uppercase; }
+  .map-footer {
+    text-align: center;
+  }
+  .map-footer .coord {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: rgba(247, 243, 236, 0.7);
+  }
+  .map-directions-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 14px;
+    padding: 12px 22px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 100px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: all 0.2s;
+  }
+  .map-directions-btn:hover { transform: translateY(-2px); background: var(--accent-deep); }
+
+  /* ---------- TESTIMONIALS ---------- */
+  .testimonials { background: var(--bg); }
+  .test-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 60px;
+  }
+  .test-card {
+    background: var(--bg-alt);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 36px 30px;
+    position: relative;
+  }
+  .test-card::before {
+    content: '"';
+    position: absolute;
+    top: 4px; left: 20px;
+    font-family: 'Fraunces', serif;
+    font-size: 100px;
+    color: var(--accent);
+    opacity: 0.2;
+    line-height: 1;
+  }
+  .test-stars { color: var(--accent); letter-spacing: 3px; margin-bottom: 14px; position: relative; }
+  .test-text {
+    font-family: 'Fraunces', serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--ink);
+    margin-bottom: 24px;
+    position: relative;
+  }
+  .test-person { display: flex; align-items: center; gap: 14px; position: relative; }
+  .test-avatar {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    font-family: 'Fraunces', serif;
+  }
+  .test-name { font-weight: 600; font-size: 14px; }
+  .test-meta { font-size: 12px; color: rgba(42, 31, 24, 0.55); }
+
+  /* ---------- ORDER / CTA ---------- */
+  .order-cta {
+    background: var(--ink);
+    padding: 110px 28px;
+    position: relative;
+    overflow: hidden;
+  }
+  .order-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 1px 1px, rgba(184, 92, 58, 0.12) 1px, transparent 0);
+    background-size: 24px 24px;
+    opacity: 0.6;
+  }
+  .order-cta-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+  .order-cta h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(40px, 5vw, 70px);
+    line-height: 1.05;
+    color: #fff;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+  }
+  .order-cta h2 em { font-style: italic; color: var(--accent); }
+  .order-cta p {
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .order-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 20px;
+  }
+  .order-opt {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 36px 24px;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s;
+    text-align: center;
+  }
+  .order-opt:hover { transform: translateY(-6px); background: rgba(184, 92, 58, 0.15); border-color: var(--accent); }
+  .order-opt .big-icon { font-size: 42px; margin-bottom: 14px; }
+  .order-opt h3 { font-family: 'Fraunces', serif; font-size: 20px; margin-bottom: 6px; }
+  .order-opt p { font-size: 14px; color: rgba(42, 31, 24, 0.6); margin: 0; }
+
+  /* ---------- FOOTER ---------- */
+  .footer {
+    background: var(--footer-bg);
+    color: rgba(247, 243, 236, 0.7);
+    padding: 80px 28px 40px;
+  }
+  .footer-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 60px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgba(184, 92, 58, 0.15);
+  }
+  .footer-brand .hindi { font-size: 30px; color: var(--saffron); line-height: 1.1; margin-bottom: 10px; }
+  .footer-brand .en-brand {
+    font-family: 'Fraunces', serif;
+    font-size: 14px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--cream);
+    margin-bottom: 20px;
+  }
+  .footer-brand p { font-size: 14px; line-height: 1.7; color: rgba(247, 243, 236, 0.55); }
+  .footer-col h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--saffron);
+    margin-bottom: 20px;
+  }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col a { color: rgba(247, 243, 236, 0.7); text-decoration: none; font-size: 14px; transition: color 0.2s; }
+  .footer-col a:hover { color: var(--saffron); }
+  .footer-bottom {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: rgba(247, 243, 236, 0.45);
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-bottom .sat-sri { font-family: 'Tiro Devanagari Hindi', serif; color: var(--accent); font-size: 14px; }
+
+  /* ---------- FLOATING WHATSAPP ---------- */
+  .wa-float {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 62px;
+    height: 62px;
+    background: #25d366;
+    color: white;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 14px 30px rgba(37, 211, 102, 0.4);
+    z-index: 99;
+    text-decoration: none;
+    animation: wiggle 3s ease-in-out infinite;
+  }
+  .wa-float:hover { transform: scale(1.1); }
+  @keyframes wiggle {
+    0%, 50%, 100% { transform: rotate(0deg); }
+    10%, 30% { transform: rotate(-10deg); }
+    20%, 40% { transform: rotate(10deg); }
+  }
+  .wa-float::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 2px solid #25d366;
+    opacity: 0.6;
+    animation: ring 2s ease-out infinite;
+  }
+  @keyframes ring {
+    0% { transform: scale(1); opacity: 0.6; }
+    100% { transform: scale(1.5); opacity: 0; }
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 1024px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+    .hero-visual { height: 460px; max-width: 440px; margin: 0 auto; width: 100%; }
+    .about-grid { grid-template-columns: 1fr; gap: 50px; }
+    .why-layout { grid-template-columns: 1fr; gap: 40px; }
+    .why-sticky { position: static; }
+    .visit-inner { grid-template-columns: 1fr; gap: 40px; }
+    .categories-grid { grid-template-columns: repeat(2, 1fr); }
+    .featured-grid { grid-template-columns: repeat(2, 1fr); }
+    .bento {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 240px 200px 200px;
+    }
+    .tile-hero { grid-column: span 4; grid-row: span 1; }
+    .tile-wide { grid-column: span 2; }
+    .bento-row-2 { grid-template-columns: repeat(3, 1fr); grid-template-rows: 200px; }
+    .tile-mid, .tile-text { grid-column: span 1; }
+    .test-grid { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr 1fr; gap: 40px; }
+  }
+
+  @media (max-width: 640px) {
+    .section { padding: 80px 22px; }
+    .hero { padding: 60px 22px 90px; }
+    nav { display: none; }
+    .menu-toggle { display: block; }
+    .top-strip-inner { font-size: 11px; }
+    .top-strip-right { gap: 12px; }
+    .hero-stats { flex-wrap: wrap; gap: 24px; }
+    .categories-grid, .featured-grid { grid-template-columns: 1fr; }
+    .bento, .bento-row-2 {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+    .tile-hero, .tile-wide, .tile-mid, .tile-text {
+      grid-column: span 1;
+      height: 220px;
+    }
+    .tile-hero { height: 280px; }
+    .tile-text { height: 180px; }
+    .tile-label .name { font-size: 24px; }
+    .tile-hero .tile-label .name { font-size: 28px; }
+    .brands { padding: 90px 22px 80px; }
+    .brands-head { margin-bottom: 50px; }
+    .brands-footer { margin-top: 40px; font-size: 14px; }
+    .order-options { grid-template-columns: 1fr; }
+    .about-visual { box-shadow: 10px 10px 0 var(--saffron); }
+    .about-highlights { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr; gap: 30px; padding-bottom: 40px; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+    .float-tag { padding: 8px 12px; font-size: 11px; }
+    .why-item { grid-template-columns: 60px 1fr; gap: 16px; }
+    .why-num { font-size: 40px; }
+    .header-cta { display: none; }
+  }
+
+  /* Scroll-reveal */
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- Top strip -->
+<div class="top-strip">
+  <div class="top-strip-inner">
+    <span class="pill"><span>◆</span> GSTIN: 09BQGPS4494H2Z6</span>
+    <div class="top-strip-right">
+      <a href="tel:+919936312820">📞 +91 99363 12820 · Kuldeep</a>
+      <span style="opacity: 0.4;">|</span>
+      <span>🕗 Open 7 AM — 10 PM · All Days</span>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-mark">
+        <!-- Khanda symbol -->
+        <svg viewBox="0 0 100 100" width="32" height="32" aria-label="Khanda">
+          <g fill="#ffffff">
+            <!-- Center khanda sword -->
+            <rect x="48" y="15" width="4" height="55" />
+            <path d="M50 12 L52 18 L50 15 L48 18 Z" />
+            <!-- Chakkar (circle) -->
+            <circle cx="50" cy="52" r="20" fill="none" stroke="#ffffff" stroke-width="4" />
+            <!-- Side swords (kirpans) -->
+            <path d="M32 30 Q24 50 32 70 L36 68 Q30 50 36 32 Z" />
+            <path d="M68 30 Q76 50 68 70 L64 68 Q70 50 64 32 Z" />
+          </g>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <div class="hindi">गुरुमुख</div>
+        <div class="en">Provision Store</div>
+      </div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#about">Our Story</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#brands">Brands</a></li>
+        <li><a href="#visit">Visit Us</a></li>
+        <li><a href="#order">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="https://wa.me/919936312820" class="header-cta">
+      <span>WhatsApp Us</span>
+      <span>→</span>
+    </a>
+    <button class="menu-toggle">☰</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">
+        <span class="dot"></span>
+        <span>Cheapest & Best Quality in Lucknow</span>
+      </div>
+      <h1>
+        <span class="hindi-title">गुरुमुख</span>
+        The corner store, <em>reimagined.</em>
+      </h1>
+      <p class="lead">
+        Every household item you need — atta, dal, oils, snacks, soaps, masalas — at <strong style="color: var(--accent); font-weight: 600;">the cheapest prices and best quality in Lucknow</strong>. Stocked fresh by a family that has known your neighbourhood for years.
+      </p>
+      <div class="hero-ctas">
+        <a href="https://wa.me/919936312820?text=Namaste,%20I%20have%20an%20enquiry" class="btn-primary">
+          <span>Enquire on WhatsApp</span>
+          <span>→</span>
+        </a>
+        <a href="#visit" class="btn-ghost">Visit Our Shop</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="num">Best</div>
+          <div class="label">Quality in Lucknow</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">Lowest</div>
+          <div class="label">Prices Guaranteed</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">500+</div>
+          <div class="label">Trusted Products</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-image-card">
+        <img src="71PWhguzXkL.webp" alt="Aashirvaad Atta — fresh from our shelves" loading="eager" />
+        <div class="hero-image-tag">
+          <span class="hero-image-tag-cat">Featured Today</span>
+          <span class="hero-image-tag-name">Aashirvaad <em>Multigrain Atta</em></span>
+        </div>
+      </div>
+      <div class="hero-side-card">
+        <div class="hero-side-stat">
+          <div class="num">★ 4.9</div>
+          <div class="lbl">Customer Trust</div>
+        </div>
+        <div class="hero-side-quote">
+          <span class="hi">"दुकान वाले भैया जी हमेशा सबसे अच्छा सामान देते हैं।"</span>
+          <span class="who">— Mrs. Sharma, Alambagh</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>
+      <span>Aashirvaad Atta</span>
+      <span class="dot-sep"></span>
+      <span>Fortune Oil</span>
+      <span class="dot-sep"></span>
+      <span>Tata Salt</span>
+      <span class="dot-sep"></span>
+      <span>Maggi Noodles</span>
+      <span class="dot-sep"></span>
+      <span>Surf Excel</span>
+      <span class="dot-sep"></span>
+      <span>Parle-G</span>
+      <span class="dot-sep"></span>
+      <span>MDH Masala</span>
+      <span class="dot-sep"></span>
+      <span>Amul Butter</span>
+      <span class="dot-sep"></span>
+      <span>Bournvita</span>
+      <span class="dot-sep"></span>
+      <span>Colgate</span>
+      <span class="dot-sep"></span>
+      <span>Dettol Soap</span>
+      <span class="dot-sep"></span>
+    </span>
+    <span>
+      <span>Aashirvaad Atta</span>
+      <span class="dot-sep"></span>
+      <span>Fortune Oil</span>
+      <span class="dot-sep"></span>
+      <span>Tata Salt</span>
+      <span class="dot-sep"></span>
+      <span>Maggi Noodles</span>
+      <span class="dot-sep"></span>
+      <span>Surf Excel</span>
+      <span class="dot-sep"></span>
+      <span>Parle-G</span>
+      <span class="dot-sep"></span>
+      <span>MDH Masala</span>
+      <span class="dot-sep"></span>
+      <span>Amul Butter</span>
+      <span class="dot-sep"></span>
+      <span>Bournvita</span>
+      <span class="dot-sep"></span>
+      <span>Colgate</span>
+      <span class="dot-sep"></span>
+      <span>Dettol Soap</span>
+      <span class="dot-sep"></span>
+    </span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="section">
+    <div class="about-grid">
+      <div class="about-visual reveal">
+        <div class="about-visual-inner">
+          <svg viewBox="0 0 100 100" class="khanda-large">
+            <g fill="#b85c3a">
+              <rect x="48" y="15" width="4" height="55" />
+              <path d="M50 10 L54 20 L50 15 L46 20 Z" />
+              <circle cx="50" cy="52" r="20" fill="none" stroke="#b85c3a" stroke-width="3" />
+              <path d="M32 30 Q24 50 32 70 L36 68 Q30 50 36 32 Z" />
+              <path d="M68 30 Q76 50 68 70 L64 68 Q70 50 64 32 Z" />
+            </g>
+          </svg>
+          <div class="hindi">गुरुमुख</div>
+          <div class="en-script">Provision Store · Alambagh</div>
+          <div class="est">Family Owned · Community Loved</div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="eyebrow">Our Story</div>
+        <h2 class="section-title">
+          A neighbourhood shop, <em>built on trust.</em>
+        </h2>
+        <p>
+          Gurumukh Provision Store began the way most good things in Lucknow do — quietly, over years of knowing our neighbours by name and remembering what every family prefers. Run by our Sikh family with the values taught to us by our elders, we treat every customer like they have walked into our home.
+        </p>
+        <p class="hindi-quote">
+          "ग्राहक भगवान का रूप है — हर घर की रसोई तक ईमानदारी से सामान पहुंचाना ही हमारी सेवा है।"
+        </p>
+        <p>
+          From morning chai to midnight maggi, from the daily kilo of atta to the festival box of sweets — we stock what real Indian homes actually use, at prices that respect your budget.
+        </p>
+        <div class="about-highlights">
+          <div class="highlight">
+            <div class="icon">🪔</div>
+            <h4>Family Owned</h4>
+            <p>Serving Alambagh with love for years.</p>
+          </div>
+          <div class="highlight">
+            <div class="icon">✅</div>
+            <h4>100% Genuine</h4>
+            <p>Every product, authentic and sealed.</p>
+          </div>
+          <div class="highlight">
+            <div class="icon">💰</div>
+            <h4>Lowest Prices</h4>
+            <p>Cheapest rates in all of Lucknow.</p>
+          </div>
+          <div class="highlight">
+            <div class="icon">⭐</div>
+            <h4>Best Quality</h4>
+            <p>Only the finest goods on our shelves.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="categories" id="categories">
+  <div class="section">
+    <div class="categories-head">
+      <div class="reveal">
+        <div class="eyebrow">What We Stock</div>
+        <h2 class="section-title">Every aisle of your kitchen, <em>covered.</em></h2>
+      </div>
+      <p class="section-sub reveal">
+        Browse our eight main categories. If you don't see something, call us — chances are, we have it in the back.
+      </p>
+    </div>
+    <div class="categories-grid">
+      <div class="cat-card reveal">
+        <span class="cat-number">01</span>
+        <div class="cat-inner">
+          <div class="cat-emoji">🌾</div>
+          <div>
+            <div class="cat-name">Atta & Grains</div>
+            <div class="cat-name-hi">आटा, चावल, दाल</div>
+            <div class="cat-arrow">→</div>
+          </div>
+        </div>
+      </div>
+      <div class="cat-card reveal">
+        <span class="cat-number">02</span>
+        <div class="cat-inner">
+          <div class="cat-emoji">🫒</div>
+          <div>
+            <div class="cat-name">Oils & Ghee</div>
+            <div class="cat-name-hi">तेल और घी</div>
+            <div class="cat-arrow">→</div>
+          </div>
+        </div>
+      </div>
+      <div class="cat-card reveal">
+        <span class="cat-number">03</span>
+        <div class="cat-inner">
+          <div class="cat-emoji">🌶️</div>
+          <div>
+            <div class="cat-name">Spices & Masala</div>
+            <div class="cat-name-hi">मसाले</div>
+            <div class="cat-arrow">→</div>
+          </div>
+        </div>
+      </div>
+      <div class="cat-card reveal">
+        <span class="cat-number">04</span>
+        <div class="cat-inner">
+          <div class="cat-emoji">🍜</div>
+          <div>
+            <div class="cat-name">Snacks & Namkeen</div>
+            <div class="cat-name-hi">नमकीन & स्नैक्स</div>
+            <div class="cat-arrow">→</div>
+          </div>
+        </div>
+      </div>
+      <div class="cat-card reveal">
+        <span class="cat-number">05</span>
+        <div class="cat-inner">
+          <div class="cat-emoji">🍪</div>
+          <div>
+            <div class="cat-name">Biscuits & Tea</div>
+            <div class="cat-name-hi">बिस्किट & चाय</div>
+            <div class="cat-arrow">→</div>
+          </div>
+        </div>
+      </div>
+      <div class="cat-card reveal">
+        <span class="cat-number">06</span>
+        <div class="cat-inner">
+          <div class="cat-emoji">🧼</div>
+          <div>
+            <div class="cat-name">Soaps & Detergents</div>
+            <div class="cat-name-hi">साबुन & सर्फ</div>
+            <div class="cat-arrow">→</div>
+          </div>
+        </div>
+      </div>
+      <div class="cat-card reveal">
+        <span class="cat-number">07</span>
+        <div class="cat-inner">
+          <div class="cat-emoji">🪥</div>
+          <div>
+            <div class="cat-name">Personal Care</div>
+            <div class="cat-name-hi">पर्सनल केयर</div>
+            <div class="cat-arrow">→</div>
+          </div>
+        </div>
+      </div>
+      <div class="cat-card reveal">
+        <span class="cat-number">08</span>
+        <div class="cat-inner">
+          <div class="cat-emoji">🥤</div>
+          <div>
+            <div class="cat-name">Beverages & Dairy</div>
+            <div class="cat-name-hi">ड्रिंक्स & डेयरी</div>
+            <div class="cat-arrow">→</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS — PRODUCT SHOWCASE -->
+<section class="brands" id="brands">
+  <div class="brands-inner">
+    <div class="brands-head reveal">
+      <div class="eyebrow">Trusted Brands</div>
+      <h2 class="section-title">Every name. <em>Every aisle.</em></h2>
+      <p class="section-sub">From the labels your grandmother stocked to the ones you bought this morning — always sealed, always genuine, always in stock.</p>
+    </div>
+
+    <!-- Main bento -->
+    <div class="bento reveal">
+      <article class="tile tile-hero">
+        <img src="71PWhguzXkL.webp" alt="Aashirvaad Atta with Multigrains" loading="lazy" />
+        <div class="tile-label">
+          <div class="cat">Daily Atta</div>
+          <div class="name">Aashirvaad <em>Multigrains</em></div>
+        </div>
+      </article>
+
+      <article class="tile tile-wide tile-maggi">
+        <img src="maggi-masala-instant-noodles-pack-of-4-280-g-quick-pantry.webp" alt="Maggi 2-Minute Masala Noodles" loading="lazy" />
+        <div class="tile-label">
+          <div class="cat">2-Minute Favourite</div>
+          <div class="name">Maggi Masala</div>
+        </div>
+      </article>
+
+      <article class="tile tile-wide tile-photo">
+        <img src="cold-drink.jpeg" alt="Cold drinks selection — Pepsi, Coca-Cola, Sprite, Fanta" loading="lazy" />
+        <div class="tile-label">
+          <div class="cat">Chilled Beverages</div>
+          <div class="name">Pepsi · Coke · Sprite · Fanta</div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Sub bento row -->
+    <div class="bento-row-2 reveal">
+      <article class="tile tile-mid tile-cleaning">
+        <img src="511kriay8FL__AC_UF1000_1000_QL80_.jpg" alt="Wheel detergent, Vim soap, Rin household care" loading="lazy" />
+        <div class="tile-label">
+          <div class="cat">Household Care</div>
+          <div class="name">Wheel · Vim · Rin</div>
+        </div>
+      </article>
+
+      <article class="tile tile-mid tile-groceries">
+        <img src="234796-hul-web.avif" alt="Daily Indian groceries — atta, masala, cookies, mix, oils" loading="lazy" />
+        <div class="tile-label">
+          <div class="cat">Daily Groceries</div>
+          <div class="name">Heritage Brands</div>
+        </div>
+      </article>
+
+      <article class="tile tile-text">
+        <div class="tile-text-num">30+</div>
+        <div class="tile-text-lbl">More Brands</div>
+        <div class="tile-text-line"></div>
+        <div class="tile-text-sub">Always on our shelves — ask for any name you don't see</div>
+      </article>
+    </div>
+
+    <p class="brands-footer reveal">
+      <span class="ornament">✦</span>
+      Every pack sourced from <strong>authorised distributors</strong> — sealed, fresh, and genuine
+      <span class="ornament">✦</span>
+      <span class="brands-marquee-line">
+        Aashirvaad <span>·</span> Fortune <span>·</span> Tata <span>·</span> Maggi <span>·</span> Britannia <span>·</span> Parle <span>·</span> Amul <span>·</span> MDH <span>·</span> Patanjali <span>·</span> Surf Excel <span>·</span> Colgate <span>·</span> Bournvita <span>·</span> Nescafé <span>·</span> Dettol
+      </span>
+    </p>
+  </div>
+</section>
+
+<!-- FEATURED PRODUCTS -->
+<section class="featured">
+  <div class="section">
+    <div class="categories-head">
+      <div class="reveal">
+        <div class="eyebrow">Kitchen Essentials</div>
+        <h2 class="section-title">The <em>everyday heroes</em> on our shelves.</h2>
+      </div>
+      <p class="section-sub reveal">Popular items our customers come back for every week — always the cheapest rate and finest quality in Lucknow. WhatsApp us to check availability.</p>
+    </div>
+    <div class="featured-grid">
+      <div class="product-card reveal">
+        <div class="product-visual pv-1"><span>🌾</span></div>
+        <div class="product-info">
+          <div class="product-tag">Daily Essential</div>
+          <div class="product-name">Whole Wheat Atta</div>
+          <div class="product-hindi">गेहूं का आटा</div>
+          <div class="product-desc">Premium chakki-fresh atta from trusted brands — the soft rotis your family grew up loving.</div>
+          <div class="product-footer">
+            <div class="quality-badge"><span class="star">★</span> Best in Lucknow</div>
+            <a href="https://wa.me/919936312820?text=Namaste,%20I%20want%20to%20enquire%20about%20Atta%20price" class="whatsapp-btn">💬 Enquire</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card reveal">
+        <div class="product-visual pv-2"><span>🫒</span></div>
+        <div class="product-info">
+          <div class="product-tag">Cooking Oil</div>
+          <div class="product-name">Refined Sunflower Oil</div>
+          <div class="product-hindi">सूरजमुखी तेल</div>
+          <div class="product-desc">Trusted brands only — sealed cans straight from the distributor to your kitchen shelf.</div>
+          <div class="product-footer">
+            <div class="quality-badge"><span class="star">★</span> Cheapest Rate</div>
+            <a href="https://wa.me/919936312820?text=Namaste,%20I%20want%20to%20enquire%20about%20Cooking%20Oil%20price" class="whatsapp-btn">💬 Enquire</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card reveal">
+        <div class="product-visual pv-3"><span>🍜</span></div>
+        <div class="product-info">
+          <div class="product-tag">Favourite</div>
+          <div class="product-name">Instant Noodles</div>
+          <div class="product-hindi">इंस्टेंट नूडल्स</div>
+          <div class="product-desc">The 2-minute friend that never lets you down. Bulk packs at our best wholesale rates.</div>
+          <div class="product-footer">
+            <div class="quality-badge"><span class="star">★</span> Wholesale Rate</div>
+            <a href="https://wa.me/919936312820?text=Namaste,%20I%20want%20to%20enquire%20about%20Noodles" class="whatsapp-btn">💬 Enquire</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card reveal">
+        <div class="product-visual pv-4"><span>🧂</span></div>
+        <div class="product-info">
+          <div class="product-tag">Pantry Must</div>
+          <div class="product-name">Iodised Salt</div>
+          <div class="product-hindi">नमक</div>
+          <div class="product-desc">Stock up on the basics. India's most trusted salt brands, always in supply.</div>
+          <div class="product-footer">
+            <div class="quality-badge"><span class="star">★</span> Daily Low Price</div>
+            <a href="https://wa.me/919936312820?text=Namaste,%20I%20want%20to%20enquire%20about%20Salt" class="whatsapp-btn">💬 Enquire</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card reveal">
+        <div class="product-visual pv-5"><span>🌶️</span></div>
+        <div class="product-info">
+          <div class="product-tag">Aromatic</div>
+          <div class="product-name">Garam Masala</div>
+          <div class="product-hindi">गरम मसाला</div>
+          <div class="product-desc">The flavour of every Indian dal, sabzi and biryani. Freshly sealed packs.</div>
+          <div class="product-footer">
+            <div class="quality-badge"><span class="star">★</span> Freshest in Market</div>
+            <a href="https://wa.me/919936312820?text=Namaste,%20I%20want%20to%20enquire%20about%20Masala" class="whatsapp-btn">💬 Enquire</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card reveal">
+        <div class="product-visual pv-6"><span>🧼</span></div>
+        <div class="product-info">
+          <div class="product-tag">Household</div>
+          <div class="product-name">Detergent Powder</div>
+          <div class="product-hindi">डिटर्जेंट पाउडर</div>
+          <div class="product-desc">Tough on stains, gentle on clothes. All leading brands, daily stock.</div>
+          <div class="product-footer">
+            <div class="quality-badge"><span class="star">★</span> Lowest in Lucknow</div>
+            <a href="https://wa.me/919936312820?text=Namaste,%20I%20want%20to%20enquire%20about%20Detergent" class="whatsapp-btn">💬 Enquire</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why">
+  <div class="section">
+    <div class="why-layout">
+      <div class="why-sticky reveal">
+        <div class="eyebrow">Why Gurumukh</div>
+        <h2 class="section-title">Small shop. <em>Big heart.</em></h2>
+        <p class="section-sub">Supermarkets have size. We have something better — <strong>relationships, reliability, and the same family at the counter every day.</strong></p>
+      </div>
+      <div class="why-list">
+        <div class="why-item reveal">
+          <div class="why-num">01</div>
+          <div class="why-content">
+            <h3>The lowest prices in Lucknow</h3>
+            <p>Because we buy directly from authorised distributors and keep our overheads lean, our shelf prices beat supermarkets, quick-commerce apps, and every other kirana in Alambagh. Compare any product — we're confident.</p>
+          </div>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-num">02</div>
+          <div class="why-content">
+            <h3>Genuine, sealed, top-quality goods</h3>
+            <p>Every packet on our shelf comes directly from authorised distributors. No loose repacking, no shortcuts, no expired stock. What you buy is exactly what the brand sent — the highest quality, every single time.</p>
+          </div>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-num">03</div>
+          <div class="why-content">
+            <h3>We know your household</h3>
+            <p>After years of serving Alambagh, we remember which atta your family prefers, which oil you buy, and when the festival season stock should come in. No algorithm can do that.</p>
+          </div>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-num">04</div>
+          <div class="why-content">
+            <h3>UPI, cash, credit — all accepted</h3>
+            <p>Pay by Paytm, PhonePe, Google Pay, or cash. Regular customers can keep a monthly credit book (udhaar) — the old-school way, still working beautifully.</p>
+          </div>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-num">05</div>
+          <div class="why-content">
+            <h3>Open 7 AM to 10 PM, every day</h3>
+            <p>Festivals, Sundays, sudden rainy evenings — we stay open. Running out of sugar at 9:45 PM? We've got you.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="visit" id="visit">
+  <div class="visit-inner">
+    <div class="reveal">
+      <div class="eyebrow">Find Us</div>
+      <h2 class="section-title">Walk in any time, <em>say Sat Sri Akal.</em></h2>
+      <p style="color: rgba(42, 31, 24, 0.75); font-size: 17px; line-height: 1.7;">
+        We are right in the heart of Alambagh market — the blue signboard with the golden Khanda is hard to miss. Walk in to browse, or send us a quick WhatsApp to check prices and stock before you come.
+      </p>
+      <div class="visit-details">
+        <div class="visit-item">
+          <div class="visit-icon">📍</div>
+          <div>
+            <h4>Shop Address</h4>
+            <p>Gurumukh Provision Store<br/>Alambagh Market, Lucknow<br/>Uttar Pradesh · 226005</p>
+          </div>
+        </div>
+        <div class="visit-item">
+          <div class="visit-icon">📞</div>
+          <div>
+            <h4>Call for Enquiry</h4>
+            <p><a href="tel:+919936312820">+91 99363 12820</a> — ask for <strong style="color: var(--ink); font-weight: 600;">Kuldeep</strong>, we answer 7 AM to 10 PM</p>
+          </div>
+        </div>
+        <div class="visit-item">
+          <div class="visit-icon">💬</div>
+          <div>
+            <h4>WhatsApp Us</h4>
+            <p><a href="https://wa.me/919936312820">Ask about prices & availability</a> — we reply personally</p>
+          </div>
+        </div>
+        <div class="visit-item">
+          <div class="visit-icon">🕗</div>
+          <div>
+            <h4>Opening Hours</h4>
+            <p>Monday — Sunday · 7:00 AM — 10:00 PM<br/>Open on all festivals & holidays</p>
+          </div>
+        </div>
+        <div class="visit-item">
+          <div class="visit-icon">💳</div>
+          <div>
+            <h4>Payments Accepted</h4>
+            <p>Cash · Paytm · PhonePe · Google Pay · UPI · Monthly udhaar for regulars</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="map-card reveal">
+      <div class="map-grid-bg"></div>
+      <div class="map-pin">
+        <div class="map-pin-dot"></div>
+        <div class="map-pin-label">गुरुमुख स्टोर</div>
+      </div>
+      <div class="map-content">
+        <div class="map-header">
+          <span>ALAMBAGH · LUCKNOW</span>
+          <span>UP · IN</span>
+        </div>
+        <div class="map-footer">
+          <div class="coord">26.8179° N · 80.8988° E</div>
+          <a href="https://www.google.com/maps?q=26.8178933,80.8988427&z=17&hl=en" target="_blank" class="map-directions-btn">
+            <span>Get Directions</span>
+            <span>↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="section">
+    <div class="categories-head">
+      <div class="reveal">
+        <div class="eyebrow">Kind Words</div>
+        <h2 class="section-title">What our <em>neighbours</em> say.</h2>
+      </div>
+      <p class="section-sub reveal">Decades of relationships, not reviews. Here's how a few of our regulars describe us.</p>
+    </div>
+    <div class="test-grid">
+      <div class="test-card reveal">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">"Bhaiya ji knows exactly which atta my mother likes — and when I call, it reaches my flat in ten minutes. Prices better than any app."</p>
+        <div class="test-person">
+          <div class="test-avatar">P</div>
+          <div>
+            <div class="test-name">Priya Sharma</div>
+            <div class="test-meta">Resident, Alambagh</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card reveal">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">"Har festival pe woh yaad rakhte hain kya kya chahiye. This is not a shop, it is like family. UPI bhi chalta hai, udhaar bhi chalti hai."</p>
+        <div class="test-person">
+          <div class="test-avatar">R</div>
+          <div>
+            <div class="test-name">Rajesh Kumar</div>
+            <div class="test-meta">Customer since years</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card reveal">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">"Ten at night, dal khatam ho gayi — only Gurumukh Store was open. They delivered in 15 minutes with a smile. Lucknow hospitality at its best."</p>
+        <div class="test-person">
+          <div class="test-avatar">A</div>
+          <div>
+            <div class="test-name">Anita Verma</div>
+            <div class="test-meta">Eldeco Colony</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT CTA -->
+<section class="order-cta" id="order">
+  <div class="order-cta-inner">
+    <div class="reveal">
+      <h2>For the best prices in Lucknow, <em>come see us.</em></h2>
+      <p>We don't do online ordering — our relationship with every customer is personal. WhatsApp us to check stock and prices, call us, or walk into the shop. You'll always leave with the best deal.</p>
+    </div>
+    <div class="order-options">
+      <a href="https://wa.me/919936312820?text=Namaste,%20I%20want%20to%20enquire%20about%20product%20price%20and%20availability" class="order-opt reveal">
+        <div class="big-icon">💬</div>
+        <h3>WhatsApp Enquiry</h3>
+        <p>Ask about prices & stock availability</p>
+      </a>
+      <a href="tel:+919936312820" class="order-opt reveal">
+        <div class="big-icon">📞</div>
+        <h3>Phone Call</h3>
+        <p>Speak to us directly, 7 AM — 10 PM</p>
+      </a>
+      <a href="#visit" class="order-opt reveal">
+        <div class="big-icon">🚶</div>
+        <h3>Visit the Shop</h3>
+        <p>Browse and pick, the traditional way</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="hindi">गुरुमुख प्रोविजन स्टोर</div>
+      <div class="en-brand">Gurumukh Provision Store</div>
+      <p>A family-run kirana in Alambagh, Lucknow — proudly serving our neighbourhood with honest prices and genuine goods.</p>
+      <p style="margin-top: 12px; font-size: 12px; opacity: 0.5;">GSTIN: 09BQGPS4494H2Z6</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#about">Our Story</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#brands">Brands We Stock</a></li>
+        <li><a href="#visit">Visit Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+919936312820">Call the Shop</a></li>
+        <li><a href="https://wa.me/919936312820">WhatsApp Enquiry</a></li>
+        <li><a href="https://www.google.com/maps?q=26.8178933,80.8988427&z=17&hl=en" target="_blank">Get Directions</a></li>
+        <li><a href="#visit">Visit Our Shop</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Shop Hours</h4>
+      <ul>
+        <li>Mon — Sun: 7 AM — 10 PM</li>
+        <li>Open on all festivals</li>
+        <li>Best quality, lowest price</li>
+        <li>UPI · Cash · Udhaar</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© Gurumukh Provision Store · Alambagh, Lucknow · Made with care</div>
+    <div class="sat-sri">ੴ ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ</div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/919936312820?text=Namaste,%20I%20want%20to%20enquire%20about%20Gurumukh%20Store" class="wa-float" aria-label="WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script>
+  // Scroll reveal
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Stagger category cards
+  document.querySelectorAll('.cat-card').forEach((el, i) => {
+    el.style.transitionDelay = `${i * 60}ms`;
+  });
+  document.querySelectorAll('.product-card').forEach((el, i) => {
+    el.style.transitionDelay = `${(i % 3) * 80}ms`;
+  });
+  document.querySelectorAll('.why-item').forEach((el, i) => {
+    el.style.transitionDelay = `${i * 80}ms`;
+  });
+  document.querySelectorAll('.test-card').forEach((el, i) => {
+    el.style.transitionDelay = `${i * 100}ms`;
+  });
+
+  // Mobile menu (simple toggle)
+  const nav = document.querySelector('nav');
+  document.querySelector('.menu-toggle')?.addEventListener('click', () => {
+    if (nav.style.display === 'block') {
+      nav.style.display = '';
+    } else {
+      nav.style.display = 'block';
+      nav.style.position = 'absolute';
+      nav.style.top = '100%';
+      nav.style.left = '0';
+      nav.style.right = '0';
+      nav.style.background = 'var(--ink)';
+      nav.style.padding = '20px 28px';
+      nav.style.borderBottom = '3px solid var(--saffron)';
+      nav.querySelector('ul').style.flexDirection = 'column';
+      nav.querySelector('ul').style.gap = '16px';
+    }
+  });
+</script>
+
+</body>
+</html>
